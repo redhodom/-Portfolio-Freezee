@@ -1,9 +1,9 @@
 import style from "./home.module.css"
 import { motion } from "framer-motion"
-import peace from "/peace.jpg"
-import zee from "/zeebuild.png"
-import notify from "/notify.png"
-import jesla from "/jesla.png"
+import zee from "./assets/zeebuild.png"
+import notify from "./assets/notify.png"
+import jesla from "./assets/jesla.png"
+import peace from "./assets/peace.jpg"
 import { useState, useEffect } from "react"
 import { FaJava, FaReact, FaNodeJs, FaGit, FaGithub, FaLinkedin } from "react-icons/fa";
 import { SiSpringboot, SiMysql, SiJavascript } from "react-icons/si";
