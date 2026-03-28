@@ -44,6 +44,22 @@ const Home = () => {
       tech: "Java • Springboot • MySQL • Git",
       image: peace,
       link: "https://github.com/yourlink"
+    },
+    {
+      title: "Rolex",
+      tech: "React • JavaScript • HTML/CSS",
+      image: peace,
+      link: "https://github.com/yourlink"
+    },{
+      title: "Rolex",
+      tech: "React • JavaScript • HTML/CSS",
+      image: peace,
+      link: "https://github.com/yourlink"
+    },{
+      title: "Rolex",
+      tech: "React • JavaScript • HTML/CSS",
+      image: peace,
+      link: "https://github.com/yourlink"
     }
   ]
 
@@ -240,57 +256,32 @@ const Home = () => {
         </section>
 
         {/* PROJECTS */}
-        <section id="projects" className={style.section}>
-          <h2>Projects</h2>
+       <section id="projects" className={style.section}>
+  <h2>Projects</h2>
 
-          <div className={style.sliderWrapper}>
+  <div className={style.projectGrid}>
+    {projects.map((proj, i) => (
+      <div className={style.projectCard} key={i}>
+        <img src={proj.image} alt={proj.title} />
 
-            <button onClick={prevSlide} className={style.navBtn}>◀</button>
+        <h3>{proj.title}</h3>
 
-            <div className={style.slider}>
-              <motion.div
-                className={style.slideTrack}
-                drag="x"
-                dragConstraints={{ left: -300, right: 300 }}
-                onDragEnd={(e, info) => {
-                  if (info.offset.x < -100) nextSlide()
-                  if (info.offset.x > 100) prevSlide()
-                }}
-                style={{ transform: `translateX(-${index * 100}%)` }}
-              >
-                {projects.map((proj, i) => (
-                  <motion.div
-                    className={style.slide}
-                    key={i}   // ✅ FIXED (no more bugs)
-                    initial={{ opacity: 0, x: 80 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.4 }}
-                  >
-                    <img src={proj.image} alt={proj.title} />
+        <p className={style.tech}>
+          {proj.tech}
+        </p>
 
-                    <h3>{proj.title}</h3>
-
-                    <p className={style.tech}>
-                      {proj.tech}
-                    </p>
-
-                    <a
-                      href={proj.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={style.projectBtn}
-                    >
-                      View Project
-                    </a>
-                  </motion.div>
-                ))}
-              </motion.div>
-            </div>
-
-            <button onClick={nextSlide} className={style.navBtn}>▶</button>
-
-          </div>
-        </section>
+        <a
+          href={proj.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={style.projectBtn}
+        >
+          View Project
+        </a>
+      </div>
+    ))}
+  </div>
+</section>
 
         <section className={style.section}>
           <h2>Experience</h2>
