@@ -289,7 +289,7 @@ const Home = () => {
           <div className={style.timeline}>
             <div className={style.timelineItem}>
               <h3>Full Stack Developer</h3>
-              <span>2024 - Present</span>
+              <span>2025 - Present</span>
               <p>Built scalable web apps using React, Node, and Spring Boot.</p>
             </div>
           </div>
