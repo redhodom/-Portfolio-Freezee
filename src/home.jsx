@@ -207,128 +207,242 @@ const Home = () => {
           </div>
         </section>
 
-        {/* ABOUT */}
-        <motion.section
-          className={`${style.section} ${style.about}`}
-          initial={{ opacity: 0, y: 80 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
-          <h2>About Me</h2>
-          <p>
-            I’m a passionate Full Stack Developer with a strong focus on building clean, responsive, and high-performance web applications. I specialize in technologies like ReactJS, Node.js, and Spring Boot, and I enjoy creating seamless user experiences backed by scalable architectures.
+       {/* ABOUT */}
+<motion.section
+  className={`${style.section} ${style.about}`}
+  initial={{ opacity: 0, y: 80 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6 }}
+  viewport={{ once: true }}
+>
+  <h2>About Me</h2>
 
-            I’ve worked on projects ranging from e-commerce platforms like ZeeBuild to dynamic applications like Notify, where I focused on UI/UX, real-time features, and performance optimization. My backend experience includes designing RESTful APIs, implementing CRUD operations, and ensuring data integrity using Java, Spring Boot, and MySQL.
+  <div className={style.aboutContainer}>
 
-            I’m always eager to learn, improve, and take on new challenges that push my technical and creative boundaries. Whether it's crafting intuitive interfaces or building reliable backend systems, I aim to deliver solutions that are both efficient and user-focused.
-          </p>
-        </motion.section>
+    {/* LEFT */}
+    <div className={style.aboutText}>
+      <h3>Who I Am</h3>
+      <p>
+        I'm a Full Stack Developer focused on building modern, scalable, and
+        high-performance web applications. I specialize in React, Node.js,
+        and Spring Boot, creating seamless user experiences backed by strong backend systems.
+      </p>
+
+      <p>
+        I enjoy turning complex ideas into clean and efficient solutions.
+        From frontend UI/UX to backend API development, I aim to deliver
+        reliable and production-ready applications.
+      </p>
+
+      <div className={style.aboutButtons}>
+        <a href={resume} download className={style.btn}>Download Resume</a>
+      </div>
+    </div>
+
+    {/* RIGHT */}
+    <div className={style.aboutCards}>
+
+      <div className={style.card}>
+        <h4>🎓 Education</h4>
+        <p>Masters's Degree in Computer Applications</p>
+        <span>2021 - 2025</span>
+      </div>
+
+      <div className={style.card}>
+        <h4>💼 Experience</h4>
+        <p>Full Stack Developer</p>
+        <span>1+ Years Hands-on Projects</span>
+      </div>
+
+      <div className={style.card}>
+        <h4>⚡ Skills</h4>
+        <p>React, Node.js, Java, Spring Boot, MySQL</p>
+      </div>
+
+      <div className={style.card}>
+        <h4>🚀 Focus</h4>
+        <p>Building scalable apps & clean UI/UX</p>
+      </div>
+
+    </div>
+
+  </div>
+</motion.section>
 
         {/* SKILLS */}
-        <section className={style.section}>
-          <h2 className={style.title}>Skills</h2>
+<section className={style.section}>
+  <h2 className={style.title}>Skills</h2>
 
-          <div className={style.skills}>
-            {skills.map((skill, index) => (
-              <motion.div
-                key={index}
-                className={style.skillCard}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <div className={style.icon}>{skill.icon}</div>
-                <span>{skill.name}</span>
-              </motion.div>
-            ))}
-          </div>
-        </section>
+  <div className={style.skillsContainer}>
 
-        {/* PROJECTS */}
-       <section id="projects" className={style.section}>
-  <h2>Projects</h2>
+    {/* LEFT SIDE */}
+    <div className={style.skillsText}>
+      <h3>My Expertise</h3>
+      <p>
+        I build full-stack applications with a strong focus on performance,
+        scalability, and clean design. I work across frontend, backend,
+        and database layers to deliver complete solutions.
+      </p>
 
-  <div className={style.projectGrid}>
-    {projects.map((proj, i) => (
-      <div className={style.projectCard} key={i}>
-        <img src={proj.image} alt={proj.title} />
-
-        <h3>{proj.title}</h3>
-
-        <p className={style.tech}>
-          {proj.tech}
-        </p>
-
-        <a
-          href={proj.link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={style.projectBtn}
-        >
-          View Project
-        </a>
+      <div className={style.skillTags}>
+        {skills.map((skill, index) => (
+          <span key={index}>{skill.name}</span>
+        ))}
       </div>
-    ))}
+    </div>
+
+    {/* RIGHT SIDE */}
+    <div className={style.skillsGrid}>
+      {skills.map((skill, index) => (
+        <motion.div
+          key={index}
+          className={style.skillBox}
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: index * 0.08 }}
+          viewport={{ once: true }}
+        >
+          <div className={style.skillIcon}>{skill.icon}</div>
+          <h4>{skill.name}</h4>
+
+          {/* fake progress (visual only, don’t overthink) */}
+          <div className={style.progressBar}>
+            <div className={style.progressFill}></div>
+          </div>
+        </motion.div>
+      ))}
+    </div>
+
   </div>
 </section>
 
-        <section className={style.section}>
-          <h2>Experience</h2>
+        {/* PROJECTS */}
+      {/* PROJECTS */}
+<section id="projects" className={style.section}>
+  <h2>Projects</h2>
 
-          <div className={style.timeline}>
-            <div className={style.timelineItem}>
-              <h3>Full Stack Developer</h3>
-              <span>2025 - Present</span>
-              <p>Built scalable web apps using React, Node, and Spring Boot.</p>
-            </div>
+  <div className={style.projectContainer}>
+
+    {/* LEFT SIDE */}
+    <div className={style.projectText}>
+      <h3>What I've Built</h3>
+      <p>
+        Here are some of the projects I've worked on, focusing on building
+        real-world applications with clean UI, strong backend logic, and
+        scalable architecture.
+      </p>
+    </div>
+
+    {/* RIGHT GRID */}
+    <div className={style.projectGridNew}>
+      {projects.map((proj, i) => (
+        <motion.div
+          key={i}
+          className={style.projectCardNew}
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: i * 0.1 }}
+          viewport={{ once: true }}
+        >
+          <div className={style.projectImage}>
+            <img src={proj.image} alt={proj.title} />
           </div>
-        </section>
+
+          <div className={style.projectContent}>
+            <h3>{proj.title}</h3>
+
+            <p className={style.projectDesc}>
+              A modern web application built using {proj.tech}.
+              Focused on performance, UI/UX, and real-world usability.
+            </p>
+
+            <div className={style.projectTech}>
+              {proj.tech.split("•").map((t, idx) => (
+                <span key={idx}>{t}</span>
+              ))}
+            </div>
+
+            <a
+              href={proj.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={style.projectBtn}
+            >
+              View Project →
+            </a>
+          </div>
+        </motion.div>
+      ))}
+    </div>
+
+  </div>
+</section>
 
         {/* CONTACT */}
-        <section id="contact" className={style.contactSection}>
-          <h2>Contact Me</h2>
+<section id="contact" className={style.contactSection}>
+  <h2>Contact Me</h2>
 
-          <div className={style.contactContainer}>
+  <div className={style.contactWrapper}>
 
-            {/* LEFT SIDE */}
-            <div className={style.contactInfo}>
-              <h3>Let's Work Together</h3>
-              <p>I’m open to opportunities, freelance, and collaborations.</p>
+    {/* LEFT SIDE */}
+    <div className={style.contactLeft}>
+      <h3>Let’s Build Something</h3>
+      <p>
+        Got an idea, project, or opportunity? I’m open to collaborations,
+        freelance work, and full-time roles. Let’s create something meaningful.
+      </p>
 
-              <p>📧 <span>jeevafreezee@gmail.com</span></p>
-              <p>📞 <span>+91 7812844434</span></p>
+      <div className={style.contactDetails}>
+        <div>
+          <span>📧</span>
+          <p>jeevafreezee@gmail.com</p>
+        </div>
+        <div>
+          <span>📞</span>
+          <p>+91 7812844434</p>
+        </div>
+      </div>
 
-              <div className={style.contactBtns}>
-                <a href="mailto:jeevafreezee@gmail.com" className={style.btn}>
-                  Email Me
-                </a>
-                <a href="tel:+917812844434" className={style.btn}>
-                  Call Me
-                </a>
-              </div>
-            </div>
+      <div className={style.contactSocials}>
+        <a href="https://github.com/redhodom">GitHub</a>
+        <a href="https://www.linkedin.com/in/jeeva-d-72a53b2b6/">LinkedIn</a>
+      </div>
+    </div>
 
-            {/* RIGHT SIDE FORM */}
-            <form
-              className={style.contactForm}
-              action="mailto:jeevafreezee@gmail.com"
-              method="POST"
-              encType="text/plain"
-            >
-              <input type="text" name="name" placeholder="Your Name" required />
-              <input type="email" name="email" placeholder="Your Email" required />
-              <input type="text" name="company" placeholder="Company Name" />
-              <textarea name="message" placeholder="Your Message" rows="4"></textarea>
+    {/* RIGHT SIDE */}
+    <form
+      className={style.contactRight}
+      action="mailto:jeevafreezee@gmail.com"
+      method="POST"
+      encType="text/plain"
+    >
+      <div className={style.inputGroup}>
+        <input type="text" name="name"  placeholder=" "  required />
+        <label>Your Name</label>
+      </div>
 
-              <button type="submit" className={style.submitBtn}>
-                Send Message
-              </button>
-            </form>
+      <div className={style.inputGroup}>
+        <input type="email" name="email" placeholder=" " required />
+        <label>Your Email</label>
+      </div>
 
-          </div>
-        </section>
+      <div className={style.inputGroup}>
+        <input type="text" name="company"  placeholder=" "  required />
+        <label>Company Optional</label>
+      </div>
+
+      <div className={style.inputGroup}>
+        <textarea name="message"  placeholder=" " rows="4" required></textarea>
+        <label>Your Message</label>
+      </div>
+
+      <button type="submit" className={style.sendBtn}>
+        Send Message 🚀
+      </button>
+    </form>
+
+  </div>
+</section>
 
       </motion.div>
     </>
