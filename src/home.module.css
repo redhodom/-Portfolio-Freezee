@@ -1010,20 +1010,28 @@ h3 {
 
 /* FIX CARD WIDTH + CENTER */
 .card {
-  width: 90%;
+  width: 100%;
   max-width: 320px;
   text-align: center;
 }
 
-/* CENTER SKILLS GRID ITEMS */
 .skillsGrid {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 350px;
   justify-items: center;
 }
 
-/* FIX SKILL BOX WIDTH */
 .skillBox {
-  width: 90%;
-  max-width: 320px;
+  width: 100%;
+}
+
+/* CENTER THE WHOLE ABOUT CARDS BLOCK */
+.aboutCards {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 350px;
+  justify-items: center;
 }
 
 }
