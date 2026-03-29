@@ -5,6 +5,7 @@ import notify from "./assets/notify.png"
 import jesla from "./assets/jesla.png"
 import peace from "./assets/peace.jpg"
 import jeeva from "./assets/jprofile.png"
+import logo from "/jflogo.png"
 import { useState, useEffect } from "react"
 import { FaJava, FaReact, FaNodeJs, FaGit, FaGithub, FaLinkedin } from "react-icons/fa";
 import { SiSpringboot, SiMysql, SiJavascript } from "react-icons/si";
@@ -122,7 +123,10 @@ const Home = () => {
 
         {/* NAVBAR */}
         <nav className={style.navbar}>
-          <h2 className={style.logo}>JEEVA</h2>
+          <div className={style.logo}>
+  <img src={logo} alt="JF Logo" />
+  <span>Jeeva</span>
+</div>
 
           {/* Hamburger */}
           <div
