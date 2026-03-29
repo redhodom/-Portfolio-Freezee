@@ -1003,6 +1003,29 @@ h3 {
     text-align: center;
   }
 
+  /* CENTER ABOUT CARDS */
+.aboutCards {
+  justify-items: center;
+}
+
+/* FIX CARD WIDTH + CENTER */
+.card {
+  width: 90%;
+  max-width: 320px;
+  text-align: center;
+}
+
+/* CENTER SKILLS GRID ITEMS */
+.skillsGrid {
+  justify-items: center;
+}
+
+/* FIX SKILL BOX WIDTH */
+.skillBox {
+  width: 90%;
+  max-width: 320px;
+}
+
 }
 
 /* ===== SMALL PHONES ===== */
