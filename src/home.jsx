@@ -4,6 +4,7 @@ import zee from "./assets/zeebuild.png"
 import notify from "./assets/notify.png"
 import jesla from "./assets/jesla.png"
 import peace from "./assets/peace.jpg"
+import jeeva from "./assets/jprofile.png"
 import { useState, useEffect } from "react"
 import { FaJava, FaReact, FaNodeJs, FaGit, FaGithub, FaLinkedin } from "react-icons/fa";
 import { SiSpringboot, SiMysql, SiJavascript } from "react-icons/si";
@@ -62,16 +63,6 @@ const Home = () => {
       link: "https://github.com/yourlink"
     }
   ]
-
-  const [index, setIndex] = useState(0)
-
-  const nextSlide = () => {
-    setIndex((prev) => (prev + 1) % projects.length)
-  }
-
-  const prevSlide = () => {
-    setIndex((prev) => (prev - 1 + projects.length) % projects.length)
-  }
 
   const skills = [
     { name: "Java", icon: <FaJava /> },
@@ -159,7 +150,7 @@ const Home = () => {
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.6 }}
             >
-              <img src={peace} alt="Jeeva" />
+              <img src={jeeva} alt="Jeeva" />
             </motion.div>
 
             <div className={style.line}></div>
