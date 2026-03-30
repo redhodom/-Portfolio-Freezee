@@ -4,6 +4,7 @@ import zee from "./assets/zeebuild.png"
 import notify from "./assets/notify.png"
 import jesla from "./assets/jesla.png"
 import peace from "./assets/peace.jpg"
+import rolex from "./assets/rolex.png"
 import jeeva from "./assets/jprofile.png"
 import logo from "/jflogo.png"
 import { useState, useEffect } from "react"
@@ -37,9 +38,9 @@ const Home = () => {
     },
     {
       title: "Rolex",
-      tech: "React • JavaScript • HTML/CSS",
-      image: peace,
-      link: "https://github.com/yourlink"
+      tech: "BootStrap• JavaScript • HTML/CSS",
+      image: rolex,
+      link: "https://rolex-zee.netlify.app/"
     },
     {
       title: "Course System",
