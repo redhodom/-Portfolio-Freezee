@@ -25,10 +25,16 @@ const Home = () => {
       link: "https://zee-build.netlify.app/"
     },
     {
+      title: "Rolex",
+      tech: "BootStrap• JavaScript • HTML/CSS",
+      image: rolex,
+      link: "https://rolex-zee.netlify.app/"
+    },
+    {
       title: "Notify",
       tech: "React • JavaScript • HTML/CSS",
       image: notify,
-      link: "https://your-live-demo.com"
+      link: "https://notify-boosted.netlify.app/"
     },
     {
       title: "Jesla",
@@ -37,30 +43,8 @@ const Home = () => {
       link: "https://jesla-cars.netlify.app/"
     },
     {
-      title: "Rolex",
-      tech: "BootStrap• JavaScript • HTML/CSS",
-      image: rolex,
-      link: "https://rolex-zee.netlify.app/"
-    },
-    {
       title: "Course System",
       tech: "Java • Springboot • MySQL • Git",
-      image: peace,
-      link: "https://github.com/yourlink"
-    },
-    {
-      title: "Rolex",
-      tech: "React • JavaScript • HTML/CSS",
-      image: peace,
-      link: "https://github.com/yourlink"
-    },{
-      title: "Rolex",
-      tech: "React • JavaScript • HTML/CSS",
-      image: peace,
-      link: "https://github.com/yourlink"
-    },{
-      title: "Rolex",
-      tech: "React • JavaScript • HTML/CSS",
       image: peace,
       link: "https://github.com/yourlink"
     }
