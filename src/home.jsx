@@ -220,7 +220,7 @@ const Home = () => {
       <p>
         I enjoy turning complex ideas into clean and efficient solutions.
         From frontend UI/UX to backend API development, I aim to deliver
-        reliable and production-ready applications.
+        reliable and production ready applications.
       </p>
 
       <div className={style.aboutButtons}>
