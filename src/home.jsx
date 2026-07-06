@@ -10,7 +10,7 @@ import logo from "/jflogo.png"
 import { useState, useEffect } from "react"
 import { FaJava, FaReact, FaNodeJs, FaGit, FaGithub, FaLinkedin } from "react-icons/fa";
 import { SiSpringboot, SiMysql, SiJavascript } from "react-icons/si";
-import resume from "/FsJeevaResume.pdf";
+import resume from "/JeevaRD.pdf";
 
 
 const Home = () => {
